@@ -233,6 +233,7 @@ include('config.php');
     </div>
     <!-- About End -->
 
+
     <!-- Service Start -->
     <div class="container-fluid service py-5">
         <div class="container service-section py-5">
@@ -299,6 +300,7 @@ include('config.php');
     </div>
     <!-- Service End -->
 
+
     <!-- Product sections  -->
     <div class="container  " style="margin-top: 6rem;margin-bottom:6rem">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
@@ -308,7 +310,7 @@ include('config.php');
         <div class="row justify-content-center">
             <?php
             include('config.php');
-            $sel = "SELECT * FROM `category` ";
+            $sel = "SELECT * FROM `products` ";
             $data = mysqli_query($con, $sel);
             $result = mysqli_num_rows($data);
             if ($result) {
@@ -317,12 +319,12 @@ include('config.php');
                     <div class="col-md-4 col-sm-12 col-lg-4 col-12 mb-5 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="card shadow-lg h-100" style="border: 1px solid green;">
 
-                            <img src="<?php echo $row['cat_image']; ?>" class="card-img-top" alt="..." height="250px" width="100%" style="object-fit:cover; border:1px solid green">
+                            <img src="<?php echo $row['pro_image']; ?>" class="card-img-top" alt="..." height="250px" width="100%" style="object-fit:cover; border:1px solid green">
                             <div class="card-body mt-3 text-center">
-                                <h5 class="card-title"><?php echo $row['cat_name']; ?></h5>
+                                <h5 class="card-title"><?php echo $row['pro_name']; ?></h5>
                                 <div class="mt-4">
                                     <a href="" class="btn btn-primary  px-4 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry</a>
-                                    <a href="singlePage.php?cat_name=<?php echo $row['cat_name']; ?>" class="btn btn-primary px-4 py-2">Details</a>
+                                    <a href="single.php?pro_id=<?php echo $row['pro_id']; ?>" class="btn btn-primary px-4 py-2">Details</a>
                                 </div>
                             </div>
                         </div>

@@ -15,18 +15,18 @@
                 <!-- <a href="product.php" class="nav-item nav-link">Products</a> -->
                 <a href="service.php" class="nav-item nav-link">Service</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catagory</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu m-0">
 
                         <?php
                         include('config.php');
-                        $sel = "SELECT * FROM  `category`";
+                        $sel = "SELECT * FROM  `products`";
                         $data = mysqli_query($con, $sel);
                         $result = mysqli_num_rows($data);
                         if ($result) {
                             while ($row = mysqli_fetch_array($data)) {
                         ?>
-                                <a href="singlePage.php?cat_name=<?php echo $row['cat_name'];?>" class="dropdown-item"><?php echo $row['cat_name']; ?></a>
+                                <a href="single.php?cat_name=<?php echo $row['pro_name'];?>" class="dropdown-item"><?php echo $row['pro_name']; ?></a>
                         <?php
                             }
                         }

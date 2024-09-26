@@ -85,10 +85,10 @@ include('config.php');
                 <!-- Hare i am making logic  -->
                 <?php
 
-                $cat_name = $_GET['pro_id']; 
+                $id = $_GET['pro_id'];
                 include('config.php');
 
-                $sel = "SELECT * FROM `products` where  `pro_id`='$cat_name' ";
+                $sel = "SELECT * FROM `products` where `pro_id`='$id' ";
                 $data = mysqli_query($con, $sel);
                 $result = mysqli_num_rows($data);
                 if ($result) {
@@ -96,41 +96,25 @@ include('config.php');
                 ?>
                         <div class="col-md-5 mb-4 wow fadeInUp" data-wow-delay="0.2s">
                             <div class="card h-100 shadow-lg">
-                                <img src="<?php echo $row['pro_image'];?>" class="card-img-top" alt="" height="250px" width="100%" style="onject-fit:cover; border:1px solid green;">
+                                <img src="<?php echo $row['pro_image']; ?>" class="card-img-top" alt="" height="250px" width="100%" style="onject-fit:cover; border:1px solid green;">
                                 <div class="card-body">
-                                    <h5 class="card-title mt-3 text-center"><?php echo $row['pro_name'];?></h5>
+                                    <h5 class="card-title mt-3 text-center"><?php echo $row['pro_name']; ?></h5>
                                     <div class="mt-3 text-center">
                                         <a href="#" class="btn btn-primary px-4 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry</a>
-                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-7 wow fadeInUp" data-wow-delay="0.2s">
-                        <h5 class="card-title mt-3 px-5 text-start"><?php echo $row['pro_name'];?></h5>
-                               <p class="px-5 lh-lg"><?php echo $row['title'];?></p>
+                            <h5 class="card-title mt-3 px-5 text-start"><?php echo $row['pro_name']; ?></h5>
+                            <p class="px-5 lh-lg"><?php echo $row['title']; ?></p>
                         </div>
                 <?php
                     }
                 }
                 ?>
             </div>
-           
+
         </div>
     </section>
     <?php include('footer.php'); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
