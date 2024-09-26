@@ -124,8 +124,8 @@
         <div class="container ">
             <div class="row py-5 px-4 justify-content-center align-items-center shadow-lg">
                 <div class="col-md-6 pb-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <h2>Our Makhan</h2>
-                    <p class="lh-lg">Makhan, often referred to as traditional Indian butter, is a rich and creamy dairy product made from churning fresh cream. It is cherished for its delightful taste and versatility in a wide range of dishes, from savory curries to sweet desserts.</p>
+                    <h2>Our Makhana</h2>
+                    <p class="lh-lg">Makhana, often referred to as traditional Indian butter, is a rich and creamy dairy product made from churning fresh cream. It is cherished for its delightful taste and versatility in a wide range of dishes, from savory curries to sweet desserts.</p>
                     <div class="btn">
                         <a href="contact.php" class="px-4 py-2 ">Contact Us</a>
                     </div>
