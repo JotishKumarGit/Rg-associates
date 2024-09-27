@@ -85,10 +85,10 @@ include('config.php');
                 <!-- Hare i am making logic  -->
                 <?php
 
-                $id = $_GET['pro_id'];
+                 $pro_id = $_GET['pro_id'];
                 include('config.php');
 
-                $sel = "SELECT * FROM `products` where `pro_id`='$id' ";
+                $sel = "SELECT * FROM `products` where `pro_id`='$pro_id' ";
                 $data = mysqli_query($con, $sel);
                 $result = mysqli_num_rows($data);
                 if ($result) {

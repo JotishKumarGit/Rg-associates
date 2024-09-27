@@ -26,7 +26,7 @@
                         if ($result) {
                             while ($row = mysqli_fetch_array($data)) {
                         ?>
-                                <a href="single.php?cat_name=<?php echo $row['pro_name'];?>" class="dropdown-item"><?php echo $row['pro_name']; ?></a>
+                                <a href="single.php?pro_id=<?php echo $row['pro_id'];?>" class="dropdown-item"><?php echo $row['pro_name']; ?></a>
                         <?php
                             }
                         }

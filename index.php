@@ -43,6 +43,28 @@ include('config.php');
         .owl-carousel .owl-stage-outer {
             height: 70vh;
         }
+
+
+        /* THis is  tesimonials image */
+        .testimonial::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(./image/product/peanuts.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+            animation-name: image-zoom;
+            animation-duration: 10s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            transition: 1s;
+        }
     </style>
 </head>
 
@@ -65,10 +87,10 @@ include('config.php');
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="image/banner/baner-4.jpg" class="d-block w-100" alt="..." height="500px" width="100%" style="object-fit: cover;">
+                <img src="image/banner/penutes-baner.jpeg" class="d-block w-100" alt="..." height="500px" width="100%" style="object-fit: cover;">
             </div>
             <div class="carousel-item">
-                <img src="image/banner/baner-3.jpg" class="d-block w-100" alt="..." height="500px" width="100%" style="object-fit: cover;">
+                <img src="image/banner/makhana-baner.jpeg" class="d-block w-100" alt="..." height="500px" width="100%" style="object-fit: cover;">
             </div>
 
         </div>
@@ -189,7 +211,7 @@ include('config.php');
                             <div class="row g-0">
                                 <div class="col-lg-12">
                                     <div class="rounded mb-4 shadow-lg">
-                                        <img src="image/banner/baner-1.avif" class="img-fluid rounded w-100" alt="">
+                                        <img src="image/product/pro-img.jpeg" class="img-fluid rounded w-100" alt="">
                                     </div>
                                     <div class="row gx-4 gy-0">
                                         <div class="col-6">
@@ -232,7 +254,6 @@ include('config.php');
         </div>
     </div>
     <!-- About End -->
-
 
     <!-- Service Start -->
     <div class="container-fluid service py-5">
@@ -323,8 +344,8 @@ include('config.php');
                             <div class="card-body mt-3 text-center">
                                 <h5 class="card-title"><?php echo $row['pro_name']; ?></h5>
                                 <div class="mt-4">
-                                    <a href="" class="btn btn-primary  px-4 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry</a>
-                                    <a href="single.php?pro_id=<?php echo $row['pro_id']; ?>" class="btn btn-primary px-4 py-2">Details</a>
+                                    <a href="" class="btn btn-primary   py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry</a>
+                                    <a href="single.php?pro_id=<?php echo $row['pro_id']; ?>" class="btn btn-primary  py-2">Details</a>
                                 </div>
                             </div>
                         </div>
@@ -422,46 +443,46 @@ include('config.php');
                         </div>
                         <div class="row g-4">
                             <div class="col-lg-6">
-                                <div class="contact-add-item rounded bg-light p-4">
+                                <div class="contact-add-item rounded bg-light p-4 100">
                                     <div class="contact-icon text-primary mb-4">
                                         <i class="fas fa-map-marker-alt fa-2x"></i>
                                     </div>
-                                    <div>
+                                    <div class="h-100">
                                         <h4>Address</h4>
                                         <p class="mb-0">H.n - 3, Biharman nagla, opposite Tandan Provision Store, F Munshi nagar , Bareilly , Uttar Pradesh , India-243122</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="contact-add-item rounded bg-light p-4">
+                            <div class="col-lg-6 ">
+                                <div class="contact-add-item rounded bg-light p-4 h-100">
                                     <div class="contact-icon text-primary mb-4">
                                         <i class="fas fa-envelope fa-2x"></i>
                                     </div>
-                                    <div>
+                                    <div >
                                         <h4>Mail Us</h4>
-                                        <p class="mb-0">richasarudost@ gmail.com</p>
+                                        <p class="mb-0 ">richasarudost@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="contact-add-item rounded bg-light p-4">
+                                <div class="contact-add-item rounded bg-light p-4 100">
                                     <div class="contact-icon text-primary mb-4">
                                         <i class="fa fa-phone-alt fa-2x"></i>
                                     </div>
-                                    <div>
+                                    <div >
                                         <h4>Telephone</h4>
                                         <p class="mb-0">+91 7830246000</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="contact-add-item rounded bg-light p-4">
+                                <div class="contact-add-item rounded bg-light p-4 100">
                                     <div class="contact-icon text-primary mb-4">
                                         <i class="fab fa-firefox-browser fa-2x"></i>
                                     </div>
-                                    <div>
+                                    <div >
                                         <h4>Our Website</h4>
-                                        <a href="">RG Associates</a>
+                                        <a href="https://www.rgassociates.co.in/">RG Associates</a>
                                     </div>
                                 </div>
                             </div>
@@ -476,60 +497,49 @@ include('config.php');
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="bg-light p-5 rounded h-100">
-                        <h4 class="text-primary mb-4">Send Your Message</h4>
+                <!--  -->
+                <div class="col-xl-6 wow fadeInUp " data-wow-delay="0.4s">
+                    <div class="bg-light p-5 rounded h-100" >
+                        <h4 class="text-primary mb-4 " style="margin-top: 90px;">Send Your Message</h4>
                         <form>
-                            <div class="row g-4">
-                                <div class="col-lg-12 col-xl-6">
+                            <div class="row g-4 ">
+                                <div class="col-lg-12 col-xl-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control border-0 name" name="" id="name" placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                        <input type="email" name="" class="form-control border-0 email" id="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="phone" class="form-control border-0" id="phone" placeholder="Phone">
+                                        <input type="phone" name="" class="form-control border-0 phone" id="phone" placeholder="Phone">
                                         <label for="phone">Your Phone</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="project" placeholder="Project">
-                                        <label for="project">Your Project</label>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                        <textarea name="message" class="form-control border-0 message" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
 
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3 " type="button" onclick="contact()">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+                <!--  -->
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="rounded">
-                        <!-- <iframe class="rounded w-100"
-                            style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd"
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                       
                         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1794185.9122921494!2d77.1078564067179!3d28.561673182944162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sH.n%20-%203%2C%20Biharman%20nagla%2C%20opposite%20Tandan%20Provision%20Store%2C%20F%20Munshi%20nagar%20%2C%20Bareilly%20%2C%20Uttar%20Pradesh%20%2C%20India-243122!5e0!3m2!1sen!2sin!4v1727255644383!5m2!1sen!2sin" class="rounded w-100"
                             style="height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

@@ -45,7 +45,24 @@
             window.open(url,"_blank").focus();
         }
     </script>
+<script>
 
+    // THis is for contact us 
+    function contact() {
+        var na = document.querySelector(".name").value;
+        var em = document.querySelector(".email").value;
+        var phone = document.querySelector(".phone").value;
+        var mes = document.querySelector(".message").value;
+        var url1 = "https://wa.me/917830246000?text=" +
+            "Name: " +
+            na + " " +
+            "Email: " +
+            em + " " +
+            "Phone :" + phone +
+            "Message :" + mes;
+        window.open(url1, "_blank").focus();
+    }
+</script>
 
 
     <!-- Footer Start -->
